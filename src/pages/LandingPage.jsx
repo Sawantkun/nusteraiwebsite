@@ -4,6 +4,8 @@ import Features from '../sections/Features'
 import About from '../sections/About'
 import Pricing from '../sections/Pricing'
 import Projects from '../sections/Projects'
+import Services from '../sections/Services'
+import CaseStudies from '../sections/CaseStudies'
 
 const LandingPage = () => {
   return (
@@ -14,11 +16,17 @@ const LandingPage = () => {
       <section id="about">
         <About />
       </section>
-      <section id="features">
-        <Features />
+      <section id="services">
+        <Services />
       </section>
       <section id="projects">
         <Projects />
+      </section>
+      <section id="features">
+        <Features />
+      </section>
+      <section id="casestudies">
+        <CaseStudies />
       </section>
       <section id="pricing">
         <Pricing />

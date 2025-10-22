@@ -37,19 +37,14 @@ export default function About() {
 
   const teamMembers = [
     {
-      name: 'Alex Chen',
-      role: 'Founder & CEO',
-      bio: 'Alex leads Nuster AI with a vision to democratize AI technology and make it accessible to businesses of all sizes.',
+      name: 'Shashidhar Naidu Boya',
+      role: 'Founder',
+      bio: 'Naidu founded Nuster AI with a vision to democratize AI technology and make it accessible to businesses of all sizes through innovative AI agents and intelligent automation solutions.',
     },
     {
-      name: 'Sarah Martinez',
-      role: 'Chief Technology Officer',
-      bio: 'Sarah spearheads our AI research and development, focusing on creating cutting-edge AI agents and solutions.',
-    },
-    {
-      name: 'Michael Park',
-      role: 'Head of Product',
-      bio: 'Michael ensures our AI solutions are intuitive, powerful, and deliver real business value to our clients.',
+      name: 'Nikitha',
+      role: 'CEO',
+      bio: 'Nikitha leads Nuster AI, driving strategic growth and ensuring our AI solutions deliver real business value to clients across industries.',
     },
   ];
 
@@ -116,7 +111,7 @@ export default function About() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
              <span className='bg-gradient-to-r from-[#795EF6] to-[#F8A588] bg-clip-text text-transparent'>Meet The Team</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {teamMembers.map((member, i) => (
               <motion.div
                 key={i}

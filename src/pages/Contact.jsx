@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, ArrowRight, Sparkles, Brain, Zap, Shield } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Zap,
+  Shield,
+} from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: '',
-    aiInterest: ''
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+    aiInterest: "",
   });
 
   const handleSubmit = (e) => {
@@ -20,7 +30,7 @@ export default function Contact() {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -34,7 +44,10 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Let's Build Your <span className="bg-gradient-to-r from-[#795EF6] to-[#F8A588] bg-clip-text text-transparent">AI Future</span>
+            Let's Build Your{" "}
+            <span className="bg-gradient-to-r from-[#795EF6] to-[#F8A588] bg-clip-text text-transparent">
+              AI Future
+            </span>
           </motion.h1>
           <motion.p
             className="text-gray-300 text-lg max-w-2xl mx-auto"
@@ -42,7 +55,8 @@ export default function Contact() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Ready to transform your business with AI? Our team of experts is here to help you navigate the future of intelligent automation.
+            Ready to transform your business with AI? Our team of experts is
+            here to help you navigate the future of intelligent automation.
           </motion.p>
         </div>
 
@@ -56,7 +70,9 @@ export default function Contact() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Name
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -67,7 +83,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -78,7 +96,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Company
+                </label>
                 <input
                   type="text"
                   name="company"
@@ -89,7 +109,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">AI Interest</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  AI Interest
+                </label>
                 <select
                   name="aiInterest"
                   value={formData.aiInterest}
@@ -104,7 +126,9 @@ export default function Contact() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Message
+                </label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -132,7 +156,9 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
           >
             <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Contact Information
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#845EF6]/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -169,7 +195,9 @@ export default function Contact() {
 
             {/* AI Solutions Card */}
             <div className="bg-gradient-to-br from-[#795EF6]/20 to-[#F8A588]/10 border border-[#845EF6]/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Our AI Solutions</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Our AI Solutions
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-[#845EF6]/20 rounded-lg flex items-center justify-center">
@@ -194,7 +222,9 @@ export default function Contact() {
 
             {/* Business Hours */}
             <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Business Hours</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Business Hours
+              </h3>
               <div className="space-y-4">
                 <div className="flex justify-between">
                   <span className="text-gray-400">Monday - Friday</span>
@@ -204,7 +234,6 @@ export default function Contact() {
                   <span className="text-gray-400">Saturday - Sunday</span>
                   <span className="text-white">Closed</span>
                 </div>
-
               </div>
             </div>
           </motion.div>
@@ -212,4 +241,4 @@ export default function Contact() {
       </div>
     </div>
   );
-} 
+}

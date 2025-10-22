@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
-  BarChart3, TrendingUp, Zap, Brain, CreditCard, PieChart, ArrowRight, Sparkles
+  BarChart3, TrendingUp, Zap, Brain, CreditCard, PieChart, ArrowRight, Sparkles, Bot
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Aurora from "../components/Aurora"
@@ -20,9 +20,9 @@ export default function Hero() {
         totalExpenses: 200,
         totalRevenue: 175,
         transactions: [
-          { name: 'AI Analysis: Grocery', amount: '+$450', type: 'income', icon: '🤖' },
-          { name: 'Smart Categorization', amount: '-$280', type: 'expense', icon: '🧠' },
-          { name: 'Predicted Savings', amount: '+$1200', type: 'income', icon: '✨' }
+          { name: 'AI Analysis: Grocery', amount: '+$450', type: 'income', icon: Bot },
+          { name: 'Smart Categorization', amount: '-$280', type: 'expense', icon: Brain },
+          { name: 'Predicted Savings', amount: '+$1200', type: 'income', icon: Sparkles }
         ]
       });
     }, 500);
@@ -143,8 +143,8 @@ export default function Hero() {
               </h3>
               <div className="space-y-3">
                 {[
-                  { name: 'SkillOrbit AI', amount: '+98 users', type: 'income', icon: '🤖' },
-                  { name: 'AlgoSphere AI', amount: '+40 users', type: 'expense', icon: '🧠' },
+                  { name: 'SkillOrbit AI', amount: '+98 users', type: 'income', icon: Bot },
+                  { name: 'AlgoSphere AI', amount: '+40 users', type: 'expense', icon: Brain },
                 ].map((tx, i) => (
                   <motion.div
                     key={i}
@@ -154,8 +154,8 @@ export default function Hero() {
                     transition={{ delay: 1 + i * 0.1, duration: 0.5 }}
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-[#845EF6]/20 rounded-full flex items-center justify-center text-sm">
-                        {tx.icon}
+                      <div className="w-8 h-8 bg-[#845EF6]/20 rounded-full flex items-center justify-center">
+                        <tx.icon className="w-4 h-4 text-[#795EF6]" />
                       </div>
                       <div>
                         <p className="text-white text-sm font-medium">{tx.name}</p>
