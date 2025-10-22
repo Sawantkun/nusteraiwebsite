@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   BarChart,
@@ -7,65 +7,65 @@ import {
   Sparkles,
   Star,
   Users,
-} from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function About() {
   const stats = [
     {
       icon: <Users className="w-6 h-6 text-[#795EF6]" />,
-      number: '500+',
-      label: 'Enterprise Clients',
+      number: "500+",
+      label: "Enterprise Clients",
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-[#795EF6]" />,
-      number: '1000+',
-      label: 'AI Agents Deployed',
+      number: "1000+",
+      label: "AI Agents Deployed",
     },
     {
       icon: <BarChart className="w-6 h-6 text-[#795EF6]" />,
-      number: '95%',
-      label: 'Client Satisfaction',
+      number: "95%",
+      label: "Client Satisfaction",
     },
     {
       icon: <Shield className="w-6 h-6 text-[#795EF6]" />,
-      number: '100%',
-      label: 'Data Security',
+      number: "100%",
+      label: "Data Security",
     },
   ];
 
   const teamMembers = [
     {
-      name: 'Shashidhar Naidu Boya',
-      role: 'Founder',
-      bio: 'Naidu founded Nuster AI with a vision to democratize AI technology and make it accessible to businesses of all sizes through innovative AI agents and intelligent automation solutions.',
+      name: "Shashidhar Naidu Boya",
+      role: "Founder",
+      bio: "He founded Nuster AI with a vision to democratize AI technology and make it accessible to businesses of all sizes through innovative AI agents and intelligent automation solutions.",
     },
     {
-      name: 'Nikitha',
-      role: 'CEO',
-      bio: 'Nikitha leads Nuster AI, driving strategic growth and ensuring our AI solutions deliver real business value to clients across industries.',
+      name: "Nikitha",
+      role: "CEO",
+      bio: "Nikitha leads Nuster AI, driving strategic growth and ensuring our AI solutions deliver real business value to clients across industries.",
     },
   ];
 
   const values = [
     {
       icon: <Sparkles className="w-6 h-6 text-[#795EF6]" />,
-      title: 'Innovation',
+      title: "Innovation",
       description:
-        'We push the boundaries of AI technology to create solutions that transform how businesses operate.',
+        "We push the boundaries of AI technology to create solutions that transform how businesses operate.",
     },
     {
       icon: <Shield className="w-6 h-6 text-[#795EF6]" />,
-      title: 'Trust',
+      title: "Trust",
       description:
-        'We maintain the highest standards of data security and privacy in all our AI solutions.',
+        "We maintain the highest standards of data security and privacy in all our AI solutions.",
     },
     {
       icon: <Users className="w-6 h-6 text-[#795EF6]" />,
-      title: 'Client Success',
+      title: "Client Success",
       description:
-        'We are committed to our client achieving success, providing continuous support and optimization.',
+        "We are committed to our client achieving success, providing continuous support and optimization.",
     },
   ];
 
@@ -80,7 +80,8 @@ export default function About() {
             About Nuster AI
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            We're on a mission to revolutionize business operations with intelligent AI agents and cutting-edge SaaS solutions.
+            We're on a mission to revolutionize business operations with
+            intelligent AI agents and cutting-edge SaaS solutions.
           </p>
         </div>
 
@@ -101,7 +102,9 @@ export default function About() {
               <div className="text-3xl font-bold text-center text-white mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-400 text-center text-sm">{stat.label}</div>
+              <div className="text-gray-400 text-center text-sm">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -109,7 +112,9 @@ export default function About() {
         {/* Team Section */}
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-             <span className='bg-gradient-to-r from-[#795EF6] to-[#F8A588] bg-clip-text text-transparent'>Meet The Team</span>
+            <span className="bg-gradient-to-r from-[#795EF6] to-[#F8A588] bg-clip-text text-transparent">
+              Meet The Team
+            </span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {teamMembers.map((member, i) => (
@@ -117,8 +122,8 @@ export default function About() {
                 key={i}
                 className={`group bg-gray-900/50 backdrop-blur-sm border p-8 rounded-2xl transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
                   activeTeamMember === i
-                    ? 'border-[#845EF6]/50 shadow-xl shadow-[#845EF6]/10'
-                    : 'border-gray-700 hover:border-[#845EF6]/30'
+                    ? "border-[#845EF6]/50 shadow-xl shadow-[#845EF6]/10"
+                    : "border-gray-700 hover:border-[#845EF6]/30"
                 }`}
                 onClick={() => setActiveTeamMember(i)}
                 initial={{ opacity: 0, y: 20 }}
@@ -137,9 +142,11 @@ export default function About() {
         </div>
 
         {/* Values Section */}
-        <div >
+        <div>
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-              <span className='bg-gradient-to-r from-[#795EF6] to-[#F8A588] bg-clip-text text-transparent'>Our Core Values</span>
+            <span className="bg-gradient-to-r from-[#795EF6] to-[#F8A588] bg-clip-text text-transparent">
+              Our Core Values
+            </span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {values.map((value, i) => (
